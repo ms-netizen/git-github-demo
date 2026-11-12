@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Tasks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Student Tasks</h1>
+    <p class="subtitle">A small project for learning Git and GitHub.</p>
+
+    <form id="taskForm" class="task-form">
+      <input id="taskInput" type="text" placeholder="Enter a task" required>
+      <button type="submit">Add task</button>
+    </form>
+
+    <p id="taskCount" class="task-count">0 tasks</p>
+    <ul id="taskList" class="task-list"></ul>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
