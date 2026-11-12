@@ -28,14 +28,13 @@ function addTask(text) {
   taskList.append(item);
   updateTaskCount();
 }
-
 taskForm.addEventListener('submit', (event) => {
   event.preventDefault();
   addTask(taskInput.value.trim());
   taskInput.value = '';
   taskInput.focus();
 });
-const clearButton = document.querySelector('#clearButton');
+let taskCountValue = 0;
 clearButton.addEventListener('click', () => {
   taskList.replaceChildren();
   updateTaskCount();
