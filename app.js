@@ -2,6 +2,7 @@ const taskForm = document.querySelector('#taskForm');
 const taskInput = document.querySelector('#taskInput');
 const taskList = document.querySelector('#taskList');
 const taskCount = document.querySelector('#taskCount');
+const clearButton = document.querySelector('#clearButton');
 
 function updateTaskCount() {
   const count = taskList.children.length;
@@ -33,6 +34,11 @@ taskForm.addEventListener('submit', (event) => {
   addTask(taskInput.value.trim());
   taskInput.value = '';
   taskInput.focus();
+});
+
+clearButton.addEventListener('click', () => {
+  taskList.replaceChildren();
+  updateTaskCount();
 });
 
 addTask('Learn git status');
