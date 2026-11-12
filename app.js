@@ -35,7 +35,7 @@ taskForm.addEventListener('submit', (event) => {
   taskInput.value = '';
   taskInput.focus();
 });
-let taskCountValue = 0;
+const clearButton = document.querySelector('#clearButton');
 clearButton.addEventListener('click', () => {
   taskList.replaceChildren();
   updateTaskCount();
